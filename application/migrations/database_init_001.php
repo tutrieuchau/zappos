@@ -117,6 +117,17 @@ class Migration_Init extends CI_Migration{
             del_flg character(1) NOT NULL DEFAULT '0'::bpchar,
             CONSTRAINT zappos_options_meta_pkey PRIMARY KEY (option_id)
         )
+         CREATE TABLE zappos_history
+        (
+            history_id serial not null,
+            history_date timestamp without time zone NOT NULL,
+            history_user_id character(60),
+            history_action_key character(10),--upload, modifier, delete ,plapla
+            history_target_id character(60), -- post id, user id
+            history_action_content text,
+            del_flg character(1) NOT NULL DEFAULT '0'::bpchar,
+            CONSTRAINT zappos_history_pkey PRIMARY KEY (history_id)
+        )
 
 
         
