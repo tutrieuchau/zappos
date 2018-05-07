@@ -117,10 +117,12 @@ class Migration_Init extends CI_Migration{
             del_flg character(1) NOT NULL DEFAULT '0'::bpchar,
             CONSTRAINT zappos_options_meta_pkey PRIMARY KEY (option_id)
         )
-
-
-        
-
 SQL;
+        $this->db->query($sql);
     }
+    public function down()
+    {
+            $this->dbforge->drop_table('blog');
+    }
+
 }
