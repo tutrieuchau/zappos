@@ -4,7 +4,7 @@
   "description": "zappos",
   "main": "package.js",
   "scripts": {
-    "test": "no"
+    "css":"node-sass src/ -o build/--output-style compressed"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/tutrieuchau/zappos/issues"
   },
-  "homepage": "https://github.com/tutrieuchau/zappos#readme"
+  "homepage": "https://github.com/tutrieuchau/zappos#readme",
+  "dependencies": {
+    "node-sass": "^4.9.0"
+  }
 }
