@@ -117,6 +117,7 @@ class Migration_Init extends CI_Migration{
             del_flg character(1) NOT NULL DEFAULT '0'::bpchar,
             CONSTRAINT zappos_options_meta_pkey PRIMARY KEY (option_id)
         )
+
          CREATE TABLE zappos_history
         (
             history_id serial not null,
@@ -128,10 +129,12 @@ class Migration_Init extends CI_Migration{
             del_flg character(1) NOT NULL DEFAULT '0'::bpchar,
             CONSTRAINT zappos_history_pkey PRIMARY KEY (history_id)
         )
-
-
-        
-
 SQL;
+       echo  $this->db->query($sql);
     }
+    public function down()
+    {
+            $this->dbforge->drop_table('blog');
+    }
+
 }
