@@ -1,0 +1,19 @@
+{
+  "name": "zappos",
+  "version": "1.0.0",
+  "description": "zappos",
+  "main": "package.js",
+  "scripts": {
+    "test": "no"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tutrieuchau/zappos.git"
+  },
+  "author": "Duc Tam",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/tutrieuchau/zappos/issues"
+  },
+  "homepage": "https://github.com/tutrieuchau/zappos#readme"
+}
